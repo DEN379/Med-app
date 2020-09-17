@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Descriptions" representedClassName="Descriptions" syncable="YES" codeGenerationType="class">
+        <attribute name="descriptions" optional="YES" attributeType="String"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Texts" inverseName="newRelationship1" inverseEntity="Texts"/>
+    </entity>
+    <entity name="Images" representedClassName="Images" syncable="YES" codeGenerationType="class">
+        <attribute name="images" optional="YES" attributeType="String"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Titles" inverseName="newRelationship" inverseEntity="Titles"/>
+    </entity>
+    <entity name="Texts" representedClassName="Texts" syncable="YES" codeGenerationType="class">
+        <attribute name="texts" optional="YES" attributeType="String"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Titles" inverseName="newRelationship1" inverseEntity="Titles"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Descriptions" inverseName="newRelationship" inverseEntity="Descriptions"/>
+    </entity>
+    <entity name="Titles" representedClassName="Titles" syncable="YES" codeGenerationType="class">
+        <attribute name="titles" optional="YES" attributeType="String"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Images" inverseName="newRelationship" inverseEntity="Images"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Texts" inverseName="newRelationship" inverseEntity="Texts"/>
+    </entity>
+    <elements>
+        <element name="Titles" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Images" positionX="132.44140625" positionY="71.67578125" width="128" height="73"/>
+        <element name="Texts" positionX="-60.453125" positionY="132.42578125" width="128" height="88"/>
+        <element name="Descriptions" positionX="121.6875" positionY="189.5859375" width="128" height="73"/>
+    </elements>
+</model>
